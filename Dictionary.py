@@ -28,7 +28,7 @@ def get_name(phone):
     if not phone.isdigit() or len(phone) != 10:
         return "This is an invalid number"
     
-    name = phone_book.get(phone)   
+    name = phone_book.get(phone)
     if name != None:
         return name
     else:
@@ -37,7 +37,7 @@ def get_name(phone):
 search = input("Enter the phone number: ")
 
 result = get_name(search)
-print("Name: ",result)
+print("Result: ",result)
 
 '''
 Q2:Write a function that receives a list containing the following numbers : [5, 0, 34, 9, 0, 13, 8]

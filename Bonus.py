@@ -1,45 +1,18 @@
 
-def weather_data():
-    weather_list= []
-    while True:
-        city = input("Enter the city name (or enter 'stop' to quit): ")
-        if city == 'stop':
-            break
-        date = input("Enter the date: ")
-        temperature = input("Enter the temperature: ")
-        humidity = input("Enter the humidity: ")
-        condition = input("Enter the weather condition: ")
-        
-        weather_entry = {
-            'city': city,
-            'date': date,
-            'temperature': temperature,
-            'humidity': humidity,
-            'condition': condition
-        }
-        weather_list.append(weather_entry)
-    return weather_list
+# Bonus (use a new file)
 
+### Exercise: Weather Data Aggregation
 
-def query_weather_data(weather_list):
-    city = input("Enter the city name to query: ")
-    found_data = False
-    for entry in weather_list:
-        if entry['city'] == city:
-            print(f"Weather data for {city}:")
-            print(f"Date: {entry['date']}")
-            print(f"Temperature: {entry['temperature']}")
-            print(f"Humidity: {entry['humidity']}")
-            print(f"Weather Condition: {entry['condition']}")
-            print()
-            found_data = True
-    
-    if not found_data:
-        print(f"No weather data found for {city}")
+# **Objective:** Write a Python program that aggregates weather data for different cities and provides weather data based on user queries.
 
-def main():
-    weather_list = weather_data()
-    query_weather_data(weather_list)
+# #### Requirements:
 
-if __name__ == '__main__':
-    main()
+# 1. **Input Weather Data:** Allow the user to input weather data for different cities. Each entry should include the city name, date, temperature, humidity, and weather condition (e.g., sunny, rainy).
+# 2. **Store Data in a Dictionary:** Use a nested dictionary to store the weather data. The outer dictionary's keys will be the city names, and the values will be another dictionary containing date and weather details.
+# 3. **Query by City:** Allow the user to query the weather data by city name, displaying all the recorded weather data for that city.
+
+# #### Guidelines:
+
+# - Use nested dictionaries to store the weather data efficiently.
+# - Implement separate functions for inputting data, querying by city.
+# - Validate user inputs to ensure correctness.
